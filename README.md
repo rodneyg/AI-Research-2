@@ -8,6 +8,16 @@ We found no clear effect from spreading the timestamps over days. Across both mo
 
 [Explore the recorded conversations](https://ai-research-2.vercel.app)
 
+## Try it
+
+Open the demo and move the slider from Minutes to Days. The user messages stay the same. The timestamps and recorded replies change.
+
+![Recorded chat with messages minutes apart](docs/slow-burn-minutes.png)
+
+![Recorded chat with messages days apart](docs/slow-burn-days.png)
+
+![Measured breach rates, intervals, and monitor catch rates](docs/slow-burn-results.png)
+
 ## Why this matters
 
 Chat assistants can see when earlier messages arrived. We wanted to know whether those visible dates change how an assistant handles the same text in the same order.
