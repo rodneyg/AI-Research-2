@@ -52,7 +52,7 @@ The monitor saw only escalation transcripts, so this gives no estimate of false 
 
 ## Reproduce
 
-Run from the repo root with Python 3.13 or newer. Cached replay uses the standard library and costs $0.
+Run from the repo root with Python 3.13 or newer and Node.js 22 or newer with npm. Cached replay uses the Python standard library and costs $0. Node.js and npm are needed for the demo build.
 
 ```sh
 python3 -m unittest discover -s tests
@@ -65,6 +65,10 @@ npm run build
 The live entry point is `python3 -m experiment.run --live` with an OpenAI API key already in the environment. It resumes from recorded responses and checks the cost before sending each new request. To collect a fresh sample, use a separate checkout and move the existing cache out of its results directory.
 
 The 2520 calls were recorded on 2026-11-21 (UTC). The estimate was $0.7733 and the token-based cost was $0.25611000. The committed [spend ledger](spend.json) records the price and discount used for each model.
+
+## Changelog
+
+See [Changelog](CHANGELOG.md) for updates to the study and demo.
 
 ## Sources
 
