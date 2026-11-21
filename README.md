@@ -52,7 +52,7 @@ The monitor saw only escalation transcripts, so this gives no estimate of false 
 
 ## Reproduce
 
-Run from the repo root with Python 3.13 or newer and Node.js 22 or newer with npm. Cached replay uses the Python standard library and costs $0. It stops if a recorded response is missing or its saved request hash differs from the current request. Node.js and npm are needed for the demo build.
+Run the Python commands from the repo root with Python 3.13 or newer on a system that supports POSIX file locking, such as macOS or Linux. Cached replay uses the Python standard library and costs $0. It stops if a recorded response is missing, a cache key appears more than once, or a saved request hash differs from the current request. Building the demo requires Node.js 22 or newer with npm.
 
 ```sh
 python3 -m unittest discover -s tests
