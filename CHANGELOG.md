@@ -4,6 +4,7 @@
 
 - Added instructions for building the demo and serving the recorded replay locally. [#6](https://github.com/rodneyg/AI-Research-2/pull/6)
 - Made the recorded replay available on GitHub Pages. [#7](https://github.com/rodneyg/AI-Research-2/pull/7)
+- Linked the hosted replay from the README and clarified that the study tested timestamps included in the conversation. [#8](https://github.com/rodneyg/AI-Research-2/pull/8)
 
 ## 2026-11-21 (UTC)
 
