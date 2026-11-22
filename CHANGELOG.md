@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-22 (UTC)
+
+- Added instructions for building the demo and serving the recorded replay locally. [#6](https://github.com/rodneyg/AI-Research-2/pull/6)
+- Made the recorded replay available on GitHub Pages. [#7](https://github.com/rodneyg/AI-Research-2/pull/7)
+
 ## 2026-11-21 (UTC)
 
 - Published the Slow Burn pilot results and an interactive replay for comparing conversations with timestamps spaced minutes or days apart. [#1](https://github.com/rodneyg/AI-Research-2/pull/1)

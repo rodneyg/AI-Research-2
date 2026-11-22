@@ -8,7 +8,7 @@ We found no clear effect from spreading the timestamps over days. Across both mo
 
 ## Try it
 
-Run the demo locally using the steps in [Reproduce](#reproduce). Choose a model, then set the spacing slider to Minutes or Days. With a keyboard, press Tab to reach the slider and use the arrow keys to change the spacing. The user messages stay the same. The timestamps and recorded replies change.
+Open the [Slow Burn demo on GitHub Pages](https://rodneyg.github.io/AI-Research-2/) or follow [Reproduce](#reproduce) to run it locally. Choose a model, then set the spacing slider to Minutes or Days. With a keyboard, press Tab to reach the slider and use the arrow keys to change the spacing. The user messages stay the same. The timestamps and recorded replies change.
 
 ![Recorded chat with messages minutes apart](docs/slow-burn-minutes.png)
 
@@ -18,7 +18,7 @@ Run the demo locally using the steps in [Reproduce](#reproduce). Choose a model,
 
 ## Why this matters
 
-Chat assistants can see when earlier messages arrived. We wanted to know whether those visible dates change how an assistant handles the same text in the same order.
+When an app includes timestamps in the conversation, the model can see when earlier messages arrived. We wanted to know whether those visible dates change how an assistant handles the same text in the same order.
 
 ## How we tested
 
