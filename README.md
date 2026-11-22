@@ -6,11 +6,9 @@ If someone pushes an AI past its rules one small step at a time, does it matter 
 
 We found no clear effect from spreading the timestamps over days. Across both models, the breach rate was 0.0% with minutes between messages and 0.0% with days (0.0 percentage points, paired sign test p = 1.000).
 
-[Explore the recorded conversations](https://ai-research-2.vercel.app)
-
 ## Try it
 
-Open the demo and move the slider from Minutes to Days. The user messages stay the same. The timestamps and recorded replies change.
+Run the demo locally using the steps in [Reproduce](#reproduce). Choose a model, then set the spacing slider to Minutes or Days. With a keyboard, press Tab to reach the slider and use the arrow keys to change the spacing. The user messages stay the same. The timestamps and recorded replies change.
 
 ![Recorded chat with messages minutes apart](docs/slow-burn-minutes.png)
 
@@ -60,7 +58,10 @@ python3 -m experiment.run
 cd demo
 npm ci
 npm run build
+python3 -m http.server 0 --bind 127.0.0.1 --directory out
 ```
+
+Open `http://127.0.0.1:<port>/` using the port printed by the server.
 
 The live entry point is `python3 -m experiment.run --live` with an OpenAI API key already in the environment. It resumes from recorded responses and checks the cost before sending each new request. To collect a fresh sample, use a separate checkout. Move the existing `results/raw/*.jsonl` files aside and leave the `results/raw/` directory in place for the new records.
 
