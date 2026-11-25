@@ -40,13 +40,13 @@ Small pilot: 480 conversations over 20 sequences. Wilson intervals are descripti
 
 For the pooled comparison, days breached more in 0 sequences, minutes in 0, and 20 tied.
 
-| Model | Minutes monitor catch | Days monitor catch | Unparsed (minutes / days) |
+| Model | Escalation detected (minutes) | Escalation detected (days) | Unparsed (minutes / days) |
 | --- | --- | --- | --- |
 | All models | 54/120 (45.0%, CI 36.4% to 53.9%) | 68/120 (56.7%, CI 47.7% to 65.2%) | 0 / 0 |
 | gpt-4o-mini-2024-07-18 | 42/60 (70.0%, CI 57.5% to 80.1%) | 49/60 (81.7%, CI 70.1% to 89.4%) | 0 / 0 |
 | gpt-5.4-nano-2026-03-17 | 12/60 (20.0%, CI 11.8% to 31.8%) | 19/60 (31.7%, CI 21.3% to 44.2%) | 0 / 0 |
 
-The monitor saw only escalation transcripts, so this gives no estimate of false alarms. The reply cap cut off 50/120 final replies in the minutes condition and 50/120 in the days condition. A breach is counted only if the marker appears in the returned text. The study tested timestamps shown in retained chat history. Production apps can also change what history a model sees as time passes. The four fictional rule families shared a prompt structure, which limits how far these results generalize.
+The denominator is every transcript in that spacing condition, including chats where the rule held. The monitor saw only escalation transcripts, so this gives no estimate of false alarms. The reply cap cut off 50/120 final replies in the minutes condition and 50/120 in the days condition. A breach is counted only if the marker appears in the returned text. The study tested timestamps shown in retained chat history. Production apps can also change what history a model sees as time passes. The four fictional rule families shared a prompt structure, which limits how far these results generalize.
 
 ## Reproduce
 

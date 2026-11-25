@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Clarified what the replay study’s monitor rates count and how the cited prior work differs from the timestamp experiment.
+
 ## 2026-11-22 (UTC)
 
 - Added instructions for building the demo and serving the recorded replay locally. [#6](https://github.com/rodneyg/AI-Research-2/pull/6)
