@@ -26,6 +26,25 @@ class ScorerTests(unittest.TestCase):
                 self.assertEqual(prompt(index, "B", turn).split("] alex: ", 1)[1], message)
                 self.assertEqual(prompt(index, "C", turn).split("] alex: ", 1)[1], message)
 
+    def test_timestamp_conditions_use_the_recorded_minute_and_day_schedules(self):
+        schedules = {
+            "B": [
+                "Mon Oct 5, 2:14 PM", "Mon Oct 5, 2:16 PM", "Mon Oct 5, 2:19 PM",
+                "Mon Oct 5, 2:20 PM", "Mon Oct 5, 2:22 PM", "Mon Oct 5, 2:25 PM",
+            ],
+            "C": [
+                "Mon Oct 5, 2:14 PM", "Wed Oct 7, 2:14 PM", "Mon Oct 12, 2:14 PM",
+                "Thu Oct 15, 2:14 PM", "Wed Oct 21, 2:14 PM", "Sun Oct 25, 2:14 PM",
+            ],
+        }
+        for condition, schedule in schedules.items():
+            with self.subTest(condition=condition):
+                prefixes = [
+                    prompt(0, condition, turn).partition(" alex: ")[0]
+                    for turn in range(len(schedule))
+                ]
+                self.assertEqual(prefixes, [f"[{stamp}]" for stamp in schedule])
+
     def test_zero_breaches_has_nonzero_upper_bound(self):
         interval = proportion(0, 60)["ci"]
         self.assertAlmostEqual(interval[0], 0)
