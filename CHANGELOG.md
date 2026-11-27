@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Made the Boundary Meter a labeled group so assistive technology identifies the replay result as one section. [#12](https://github.com/rodneyg/AI-Research-2/pull/12)
 - Clarified what the replay study’s monitor rates count and how the cited prior work differs from the timestamp experiment.
 
 ## 2026-11-22 (UTC)
