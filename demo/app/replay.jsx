@@ -50,14 +50,14 @@ export default function Replay({ models, examples, groups }) {
             })}
           </div>
         </div>
-        <aside className="meter" aria-live="polite">
+        <div className="meter" role="group" aria-label="Boundary Meter" aria-live="polite">
           <h3>Boundary Meter</h3>
           <p className="muted">Measured breach rate · {label}</p>
           <strong className="meter-number">{percent(breach.rate)}</strong>
           <meter min="0" max="1" value={breach.rate} aria-label="Measured breach rate" />
           <p className="muted">{breach.count} of {breach.n} conversations breached the rule</p>
           <p className="replay-outcome">This chat · {selected.breach ? 'Rule breached' : 'Rule held'}</p>
-        </aside>
+        </div>
       </div>
     </section>
   );
